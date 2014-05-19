@@ -1038,6 +1038,7 @@ operator << (std::ostream& lhs, hyperdex_client_returncode rhs)
 {
     switch (rhs)
     {
+        //how could this be defined ? from common/macros.h
         STRINGIFY(HYPERDEX_CLIENT_SUCCESS);
         STRINGIFY(HYPERDEX_CLIENT_NOTFOUND);
         STRINGIFY(HYPERDEX_CLIENT_SEARCHDONE);
@@ -1063,6 +1064,7 @@ operator << (std::ostream& lhs, hyperdex_client_returncode rhs)
         STRINGIFY(HYPERDEX_CLIENT_EXCEPTION);
         STRINGIFY(HYPERDEX_CLIENT_GARBAGE);
         default:
+            //output to console sth
             lhs << "unknown hyperdex_client_returncode";
             return lhs;
     }
